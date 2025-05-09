@@ -1,0 +1,155 @@
+{
+    "chartConfig": {
+        "name": "customers/cresta/profiles/walter-dev/analyticsCharts/0196689e-b148-79df-956a-3199e71fcfeb",
+        "state": "ACTIVE",
+        "displayName": "test",
+        "description": "",
+        "dataConfig": {
+            "metrics": [
+                {
+                    "renderingConfig": {
+                        "colors": [
+                            "#228BE6",
+                            "#FD7E14",
+                            "#2F9E44",
+                            "#5246E0",
+                            "#E03131",
+                            "#15AABF",
+                            "#FAB005",
+                            "#F06595",
+                            "#868E96",
+                            "#94D82D"
+                        ]
+                    },
+                    "forSubcategory": {
+                        "subcategories": [
+                            {
+                                "momentName": "customers/cresta/profiles/walter-dev/moments/ab959df8-d1b5-425f-a203-5b7e175a397f"
+                            }
+                        ],
+                        "statsType": {
+                            "commonStatsType": "COMMON_STATS_TYPE_CONVERSATION_COUNT"
+                        }
+                    }
+                }
+            ],
+            "filters": [
+                {
+                    "targetAttribute": "CHART_ATTRIBUTE_UNSPECIFIED",
+                    "operator": "IN",
+                    "valueSet": {
+                        "rangeValues": {
+                            "rangeValues": [
+                                {
+                                    "fromValue": {
+                                        "timestamp": "2025-04-19T21:00:00Z"
+                                    },
+                                    "toValue": {
+                                        "timestamp": "2025-04-24T20:59:59.999Z"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "targetAttribute": "CHART_ATTRIBUTE_UNSPECIFIED",
+                    "operator": "IN",
+                    "valueSet": {
+                        "singleValues": {
+                            "attributeValues": [
+                                {
+                                    "usecaseNameValue": "customers/cresta/profiles/walter-dev/usecases/walter-dev"
+                                }
+                            ]
+                        }
+                    }
+                }
+            ],
+            "groupBy": [
+                {
+                    "byTime": {
+                        "timeAttribute": "CHART_ATTRIBUTE_UNSPECIFIED",
+                        "interval": "DAY"
+                    }
+                }
+            ]
+        },
+        "audience": {
+            "roles": []
+        },
+        "accessibility": "PERSONAL",
+        "creator": "customers/cresta/users/1b34e20ce57da61c",
+        "lastEditor": "customers/cresta/users/1b34e20ce57da61c",
+        "createTime": "2025-04-24T16:25:52.712649Z",
+        "updateTime": "2025-04-24T16:25:52.712649Z",
+        "renderingConfig": {
+            "chartDisplayType": "PIE_CHART"
+        }
+    },
+    "evaluationData": {
+        "groupByValuesForAllKeys": [
+            {
+                "groupByValues": [
+                    {
+                        "value": {
+                            "timestamp": "2025-04-19T21:00:00Z"
+                        }
+                    },
+                    {
+                        "value": {
+                            "timestamp": "2025-04-20T21:00:00Z"
+                        }
+                    },
+                    {
+                        "value": {
+                            "timestamp": "2025-04-21T21:00:00Z"
+                        }
+                    },
+                    {
+                        "value": {
+                            "timestamp": "2025-04-22T21:00:00Z"
+                        }
+                    },
+                    {
+                        "value": {
+                            "timestamp": "2025-04-23T21:00:00Z"
+                        }
+                    }
+                ]
+            }
+        ],
+        "analyticsNumbers": [
+            {
+                "value": 1,
+                "groupByValueIndexes": [
+                    0
+                ]
+            },
+            {
+                "value": 1,
+                "groupByValueIndexes": [
+                    1
+                ]
+            },
+            {
+                "value": 1,
+                "groupByValueIndexes": [
+                    2
+                ]
+            },
+            {
+                "value": 1,
+                "groupByValueIndexes": [
+                    3
+                ]
+            },
+            {
+                "value": 2,
+                "groupByValueIndexes": [
+                    4
+                ]
+            }
+        ]
+    }
+}

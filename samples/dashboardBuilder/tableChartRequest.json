@@ -1,0 +1,973 @@
+{
+    "chartConfig": {
+        "name": "customers/cresta/profiles/walter-dev/analyticsCharts/3b34ea27-1098-46de-b8fa-87b38bd99af3",
+        "state": "ACTIVE",
+        "displayName": "aaa",
+        "description": "a",
+        "dataConfig": {
+            "metrics": [
+                {
+                    "renderingConfig": {
+                        "colors": [
+                            "#228BE6",
+                            "#FD7E14",
+                            "#2F9E44",
+                            "#5246E0",
+                            "#E03131",
+                            "#15AABF",
+                            "#FCC419",
+                            "#F783AC",
+                            "#868E96",
+                            "#A9E34B"
+                        ]
+                    },
+                    "forMetadata": {
+                        "metadatas": [
+                            {
+                                "momentName": "customers/cresta/profiles/walter-dev/moments/7252ec08-0620-4c83-93aa-6ccc84b6750b",
+                                "outcomeConfig": {
+                                    "source": "CRESTA_MODELLED"
+                                },
+                                "values": [
+                                    {
+                                        "stringValue": "resolved"
+                                    }
+                                ],
+                                "numericValueRanges": []
+                            },
+                            {
+                                "momentName": "customers/cresta/profiles/walter-dev/moments/7252ec08-0620-4c83-93aa-6ccc84b6750b",
+                                "outcomeConfig": {
+                                    "source": "CRESTA_MODELLED"
+                                },
+                                "values": [
+                                    {
+                                        "stringValue": "unresolved"
+                                    }
+                                ],
+                                "numericValueRanges": []
+                            },
+                            {
+                                "momentName": "customers/cresta/profiles/walter-dev/moments/7252ec08-0620-4c83-93aa-6ccc84b6750b",
+                                "outcomeConfig": {
+                                    "source": "CRESTA_MODELLED"
+                                },
+                                "values": [
+                                    {
+                                        "stringValue": "not_care"
+                                    }
+                                ],
+                                "numericValueRanges": []
+                            }
+                        ],
+                        "statsType": {
+                            "commonStatsType": "COMMON_STATS_TYPE_CONVERSATION_COUNT"
+                        }
+                    }
+                }
+            ],
+            "filters": [
+                {
+                    "targetAttribute": "CHART_ATTRIBUTE_UNSPECIFIED",
+                    "operator": "IN",
+                    "valueSet": {
+                        "rangeValues": {
+                            "rangeValues": [
+                                {
+                                    "fromValue": {
+                                        "relativeTimestamp": {
+                                            "durationBeforeNow": {
+                                                "days": 30
+                                            }
+                                        }
+                                    },
+                                    "toValue": {
+                                        "relativeTimestamp": {
+                                            "durationBeforeNow": {
+                                                "days": 0
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "targetAttribute": "CHART_ATTRIBUTE_UNSPECIFIED",
+                    "operator": "IN",
+                    "valueSet": {
+                        "singleValues": {
+                            "attributeValues": [
+                                {
+                                    "usecaseNameValue": "customers/cresta/profiles/walter-dev/usecases/walter-dev"
+                                }
+                            ]
+                        }
+                    }
+                }
+            ],
+            "groupBy": [
+                {
+                    "byTime": {
+                        "timeAttribute": "CHART_ATTRIBUTE_UNSPECIFIED",
+                        "interval": "DAY"
+                    }
+                }
+            ]
+        },
+        "audience": {
+            "roles": []
+        },
+        "accessibility": "LIBRARY",
+        "creator": "customers/cresta/users/d8cc725eb501117",
+        "lastEditor": "customers/cresta/users/d8cc725eb501117",
+        "createTime": "2025-03-25T23:51:15.750640Z",
+        "updateTime": "2025-03-25T23:51:15.987026Z",
+        "renderingConfig": {
+            "chartDisplayType": "BAR_CHART"
+        }
+    },
+    "evaluationData": {
+        "groupByValuesForAllKeys": [
+            {
+                "groupByValues": [
+                    {
+                        "value": {
+                            "metadataValue": {
+                                "momentName": "customers/cresta/profiles/walter-dev/moments/7252ec08-0620-4c83-93aa-6ccc84b6750b",
+                                "outcomeConfig": {
+                                    "source": "CRESTA_MODELLED"
+                                },
+                                "values": [
+                                    {
+                                        "stringValue": "resolved"
+                                    }
+                                ],
+                                "numericValueRanges": []
+                            }
+                        }
+                    },
+                    {
+                        "value": {
+                            "metadataValue": {
+                                "momentName": "customers/cresta/profiles/walter-dev/moments/7252ec08-0620-4c83-93aa-6ccc84b6750b",
+                                "outcomeConfig": {
+                                    "source": "CRESTA_MODELLED"
+                                },
+                                "values": [
+                                    {
+                                        "stringValue": "unresolved"
+                                    }
+                                ],
+                                "numericValueRanges": []
+                            }
+                        }
+                    },
+                    {
+                        "value": {
+                            "metadataValue": {
+                                "momentName": "customers/cresta/profiles/walter-dev/moments/7252ec08-0620-4c83-93aa-6ccc84b6750b",
+                                "outcomeConfig": {
+                                    "source": "CRESTA_MODELLED"
+                                },
+                                "values": [
+                                    {
+                                        "stringValue": "not_care"
+                                    }
+                                ],
+                                "numericValueRanges": []
+                            }
+                        }
+                    }
+                ]
+            },
+            {
+                "groupByValues": [
+                    {
+                        "value": {
+                            "timestamp": "2025-04-09T21:00:00Z"
+                        }
+                    },
+                    {
+                        "value": {
+                            "timestamp": "2025-04-10T21:00:00Z"
+                        }
+                    },
+                    {
+                        "value": {
+                            "timestamp": "2025-04-11T21:00:00Z"
+                        }
+                    },
+                    {
+                        "value": {
+                            "timestamp": "2025-04-12T21:00:00Z"
+                        }
+                    },
+                    {
+                        "value": {
+                            "timestamp": "2025-04-13T21:00:00Z"
+                        }
+                    },
+                    {
+                        "value": {
+                            "timestamp": "2025-04-14T21:00:00Z"
+                        }
+                    },
+                    {
+                        "value": {
+                            "timestamp": "2025-04-15T21:00:00Z"
+                        }
+                    },
+                    {
+                        "value": {
+                            "timestamp": "2025-04-16T21:00:00Z"
+                        }
+                    },
+                    {
+                        "value": {
+                            "timestamp": "2025-04-17T21:00:00Z"
+                        }
+                    },
+                    {
+                        "value": {
+                            "timestamp": "2025-04-18T21:00:00Z"
+                        }
+                    },
+                    {
+                        "value": {
+                            "timestamp": "2025-04-19T21:00:00Z"
+                        }
+                    },
+                    {
+                        "value": {
+                            "timestamp": "2025-04-20T21:00:00Z"
+                        }
+                    },
+                    {
+                        "value": {
+                            "timestamp": "2025-04-21T21:00:00Z"
+                        }
+                    },
+                    {
+                        "value": {
+                            "timestamp": "2025-04-22T21:00:00Z"
+                        }
+                    },
+                    {
+                        "value": {
+                            "timestamp": "2025-04-23T21:00:00Z"
+                        }
+                    },
+                    {
+                        "value": {
+                            "timestamp": "2025-04-24T21:00:00Z"
+                        }
+                    },
+                    {
+                        "value": {
+                            "timestamp": "2025-04-25T21:00:00Z"
+                        }
+                    },
+                    {
+                        "value": {
+                            "timestamp": "2025-04-26T21:00:00Z"
+                        }
+                    },
+                    {
+                        "value": {
+                            "timestamp": "2025-04-27T21:00:00Z"
+                        }
+                    },
+                    {
+                        "value": {
+                            "timestamp": "2025-04-28T21:00:00Z"
+                        }
+                    },
+                    {
+                        "value": {
+                            "timestamp": "2025-04-29T21:00:00Z"
+                        }
+                    },
+                    {
+                        "value": {
+                            "timestamp": "2025-04-30T21:00:00Z"
+                        }
+                    },
+                    {
+                        "value": {
+                            "timestamp": "2025-05-01T21:00:00Z"
+                        }
+                    },
+                    {
+                        "value": {
+                            "timestamp": "2025-05-02T21:00:00Z"
+                        }
+                    },
+                    {
+                        "value": {
+                            "timestamp": "2025-05-03T21:00:00Z"
+                        }
+                    },
+                    {
+                        "value": {
+                            "timestamp": "2025-05-04T21:00:00Z"
+                        }
+                    },
+                    {
+                        "value": {
+                            "timestamp": "2025-05-05T21:00:00Z"
+                        }
+                    },
+                    {
+                        "value": {
+                            "timestamp": "2025-05-06T21:00:00Z"
+                        }
+                    },
+                    {
+                        "value": {
+                            "timestamp": "2025-05-07T21:00:00Z"
+                        }
+                    },
+                    {
+                        "value": {
+                            "timestamp": "2025-05-08T21:00:00Z"
+                        }
+                    }
+                ]
+            }
+        ],
+        "analyticsNumbers": [
+            {
+                "value": 74,
+                "groupByValueIndexes": [
+                    0,
+                    0
+                ]
+            },
+            {
+                "value": 68,
+                "groupByValueIndexes": [
+                    0,
+                    1
+                ]
+            },
+            {
+                "value": 27,
+                "groupByValueIndexes": [
+                    0,
+                    2
+                ]
+            },
+            {
+                "value": 1,
+                "groupByValueIndexes": [
+                    0,
+                    3
+                ]
+            },
+            {
+                "value": 51,
+                "groupByValueIndexes": [
+                    0,
+                    4
+                ]
+            },
+            {
+                "value": 70,
+                "groupByValueIndexes": [
+                    0,
+                    5
+                ]
+            },
+            {
+                "value": 67,
+                "groupByValueIndexes": [
+                    0,
+                    6
+                ]
+            },
+            {
+                "value": 54,
+                "groupByValueIndexes": [
+                    0,
+                    7
+                ]
+            },
+            {
+                "value": 68,
+                "groupByValueIndexes": [
+                    0,
+                    8
+                ]
+            },
+            {
+                "value": 68,
+                "groupByValueIndexes": [
+                    0,
+                    9
+                ]
+            },
+            {
+                "value": 73,
+                "groupByValueIndexes": [
+                    0,
+                    10
+                ]
+            },
+            {
+                "value": 77,
+                "groupByValueIndexes": [
+                    0,
+                    11
+                ]
+            },
+            {
+                "value": 70,
+                "groupByValueIndexes": [
+                    0,
+                    12
+                ]
+            },
+            {
+                "value": 80,
+                "groupByValueIndexes": [
+                    0,
+                    13
+                ]
+            },
+            {
+                "value": 69,
+                "groupByValueIndexes": [
+                    0,
+                    14
+                ]
+            },
+            {
+                "value": 74,
+                "groupByValueIndexes": [
+                    0,
+                    15
+                ]
+            },
+            {
+                "value": 73,
+                "groupByValueIndexes": [
+                    0,
+                    16
+                ]
+            },
+            {
+                "value": 72,
+                "groupByValueIndexes": [
+                    0,
+                    17
+                ]
+            },
+            {
+                "value": 71,
+                "groupByValueIndexes": [
+                    0,
+                    18
+                ]
+            },
+            {
+                "value": 72,
+                "groupByValueIndexes": [
+                    0,
+                    19
+                ]
+            },
+            {
+                "value": 91,
+                "groupByValueIndexes": [
+                    0,
+                    20
+                ]
+            },
+            {
+                "value": 64,
+                "groupByValueIndexes": [
+                    0,
+                    21
+                ]
+            },
+            {
+                "value": 72,
+                "groupByValueIndexes": [
+                    0,
+                    22
+                ]
+            },
+            {
+                "value": 85,
+                "groupByValueIndexes": [
+                    0,
+                    23
+                ]
+            },
+            {
+                "value": 76,
+                "groupByValueIndexes": [
+                    0,
+                    24
+                ]
+            },
+            {
+                "value": 88,
+                "groupByValueIndexes": [
+                    0,
+                    25
+                ]
+            },
+            {
+                "value": 84,
+                "groupByValueIndexes": [
+                    0,
+                    26
+                ]
+            },
+            {
+                "value": 69,
+                "groupByValueIndexes": [
+                    0,
+                    27
+                ]
+            },
+            {
+                "value": 76,
+                "groupByValueIndexes": [
+                    0,
+                    28
+                ]
+            },
+            {
+                "value": 50,
+                "groupByValueIndexes": [
+                    0,
+                    29
+                ]
+            },
+            {
+                "value": 45,
+                "groupByValueIndexes": [
+                    1,
+                    0
+                ]
+            },
+            {
+                "value": 43,
+                "groupByValueIndexes": [
+                    1,
+                    1
+                ]
+            },
+            {
+                "value": 81,
+                "groupByValueIndexes": [
+                    1,
+                    2
+                ]
+            },
+            {
+                "value": 103,
+                "groupByValueIndexes": [
+                    1,
+                    3
+                ]
+            },
+            {
+                "value": 64,
+                "groupByValueIndexes": [
+                    1,
+                    4
+                ]
+            },
+            {
+                "value": 50,
+                "groupByValueIndexes": [
+                    1,
+                    5
+                ]
+            },
+            {
+                "value": 41,
+                "groupByValueIndexes": [
+                    1,
+                    6
+                ]
+            },
+            {
+                "value": 51,
+                "groupByValueIndexes": [
+                    1,
+                    7
+                ]
+            },
+            {
+                "value": 82,
+                "groupByValueIndexes": [
+                    1,
+                    8
+                ]
+            },
+            {
+                "value": 50,
+                "groupByValueIndexes": [
+                    1,
+                    9
+                ]
+            },
+            {
+                "value": 48,
+                "groupByValueIndexes": [
+                    1,
+                    10
+                ]
+            },
+            {
+                "value": 48,
+                "groupByValueIndexes": [
+                    1,
+                    11
+                ]
+            },
+            {
+                "value": 62,
+                "groupByValueIndexes": [
+                    1,
+                    12
+                ]
+            },
+            {
+                "value": 63,
+                "groupByValueIndexes": [
+                    1,
+                    13
+                ]
+            },
+            {
+                "value": 81,
+                "groupByValueIndexes": [
+                    1,
+                    14
+                ]
+            },
+            {
+                "value": 83,
+                "groupByValueIndexes": [
+                    1,
+                    15
+                ]
+            },
+            {
+                "value": 53,
+                "groupByValueIndexes": [
+                    1,
+                    16
+                ]
+            },
+            {
+                "value": 49,
+                "groupByValueIndexes": [
+                    1,
+                    17
+                ]
+            },
+            {
+                "value": 55,
+                "groupByValueIndexes": [
+                    1,
+                    18
+                ]
+            },
+            {
+                "value": 56,
+                "groupByValueIndexes": [
+                    1,
+                    19
+                ]
+            },
+            {
+                "value": 68,
+                "groupByValueIndexes": [
+                    1,
+                    20
+                ]
+            },
+            {
+                "value": 61,
+                "groupByValueIndexes": [
+                    1,
+                    21
+                ]
+            },
+            {
+                "value": 69,
+                "groupByValueIndexes": [
+                    1,
+                    22
+                ]
+            },
+            {
+                "value": 50,
+                "groupByValueIndexes": [
+                    1,
+                    23
+                ]
+            },
+            {
+                "value": 48,
+                "groupByValueIndexes": [
+                    1,
+                    24
+                ]
+            },
+            {
+                "value": 52,
+                "groupByValueIndexes": [
+                    1,
+                    25
+                ]
+            },
+            {
+                "value": 60,
+                "groupByValueIndexes": [
+                    1,
+                    26
+                ]
+            },
+            {
+                "value": 55,
+                "groupByValueIndexes": [
+                    1,
+                    27
+                ]
+            },
+            {
+                "value": 73,
+                "groupByValueIndexes": [
+                    1,
+                    28
+                ]
+            },
+            {
+                "value": 44,
+                "groupByValueIndexes": [
+                    1,
+                    29
+                ]
+            },
+            {
+                "value": 0,
+                "groupByValueIndexes": [
+                    2,
+                    0
+                ]
+            },
+            {
+                "value": 0,
+                "groupByValueIndexes": [
+                    2,
+                    1
+                ]
+            },
+            {
+                "value": 0,
+                "groupByValueIndexes": [
+                    2,
+                    2
+                ]
+            },
+            {
+                "value": 0,
+                "groupByValueIndexes": [
+                    2,
+                    3
+                ]
+            },
+            {
+                "value": 0,
+                "groupByValueIndexes": [
+                    2,
+                    4
+                ]
+            },
+            {
+                "value": 0,
+                "groupByValueIndexes": [
+                    2,
+                    5
+                ]
+            },
+            {
+                "value": 0,
+                "groupByValueIndexes": [
+                    2,
+                    6
+                ]
+            },
+            {
+                "value": 0,
+                "groupByValueIndexes": [
+                    2,
+                    7
+                ]
+            },
+            {
+                "value": 0,
+                "groupByValueIndexes": [
+                    2,
+                    8
+                ]
+            },
+            {
+                "value": 0,
+                "groupByValueIndexes": [
+                    2,
+                    9
+                ]
+            },
+            {
+                "value": 0,
+                "groupByValueIndexes": [
+                    2,
+                    10
+                ]
+            },
+            {
+                "value": 0,
+                "groupByValueIndexes": [
+                    2,
+                    11
+                ]
+            },
+            {
+                "value": 0,
+                "groupByValueIndexes": [
+                    2,
+                    12
+                ]
+            },
+            {
+                "value": 0,
+                "groupByValueIndexes": [
+                    2,
+                    13
+                ]
+            },
+            {
+                "value": 0,
+                "groupByValueIndexes": [
+                    2,
+                    14
+                ]
+            },
+            {
+                "value": 3,
+                "groupByValueIndexes": [
+                    2,
+                    15
+                ]
+            },
+            {
+                "value": 1,
+                "groupByValueIndexes": [
+                    2,
+                    16
+                ]
+            },
+            {
+                "value": 0,
+                "groupByValueIndexes": [
+                    2,
+                    17
+                ]
+            },
+            {
+                "value": 1,
+                "groupByValueIndexes": [
+                    2,
+                    18
+                ]
+            },
+            {
+                "value": 0,
+                "groupByValueIndexes": [
+                    2,
+                    19
+                ]
+            },
+            {
+                "value": 2,
+                "groupByValueIndexes": [
+                    2,
+                    20
+                ]
+            },
+            {
+                "value": 0,
+                "groupByValueIndexes": [
+                    2,
+                    21
+                ]
+            },
+            {
+                "value": 2,
+                "groupByValueIndexes": [
+                    2,
+                    22
+                ]
+            },
+            {
+                "value": 1,
+                "groupByValueIndexes": [
+                    2,
+                    23
+                ]
+            },
+            {
+                "value": 0,
+                "groupByValueIndexes": [
+                    2,
+                    24
+                ]
+            },
+            {
+                "value": 0,
+                "groupByValueIndexes": [
+                    2,
+                    25
+                ]
+            },
+            {
+                "value": 0,
+                "groupByValueIndexes": [
+                    2,
+                    26
+                ]
+            },
+            {
+                "value": 0,
+                "groupByValueIndexes": [
+                    2,
+                    27
+                ]
+            },
+            {
+                "value": 2,
+                "groupByValueIndexes": [
+                    2,
+                    28
+                ]
+            },
+            {
+                "value": 0,
+                "groupByValueIndexes": [
+                    2,
+                    29
+                ]
+            }
+        ]
+    }
+}

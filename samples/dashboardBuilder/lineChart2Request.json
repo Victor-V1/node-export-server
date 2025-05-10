@@ -1355,7 +1355,7 @@
         ]
     },
     "chartDataMaps": {
-        "moments": {
+        "emotionsByName": {
             "customers/cresta/profiles/walter-dev/moments/df8154c8-1707-4d21-ac8d-acd40fe2b565": {
                 "displayName": "Happiness"
             },

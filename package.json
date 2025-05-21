@@ -31,7 +31,6 @@
     "highcharts-export-server": "./bin/cli.js"
   },
   "scripts": {
-    "install": "node ./install.js",
     "prestart": "rm -rf tmp || del -rf tmp /Q && node ./node_modules/puppeteer/install.mjs",
     "start": "node ./bin/cli.js --enableServer 1 --logLevel 2 -customCode 1 -callback 1 -resources 1 -allowCodeExecution 1",
     "start:dev": "nodemon ./bin/cli.js --enableServer 1 --logLevel 4",
@@ -71,12 +70,13 @@
     "express-rate-limit": "^7.3.1",
     "https-proxy-agent": "^7.0.5",
     "jsdom": "^24.1.0",
+    "lodash": "^4.17.21",
     "multer": "^1.4.5-lts.1",
     "prompts": "^2.4.2",
-    "puppeteer": "^22.12.1",
     "tarn": "^3.0.2",
     "uuid": "^10.0.0",
-    "zod": "^3.23.8"
+    "zod": "^3.23.8",
+    "chrome-aws-lambda": "^10.1.0"
   },
   "lint-staged": {
     "*.js": "npx eslint --cache --fix",

@@ -176,9 +176,9 @@
         ]
     },
     "chartDataMaps": {
-        "moments": {
+        "categoriesByName": {
             "customers/cresta/profiles/walter-dev/moments/fafe62c8-7e3d-4e9c-84dd-f4607eedb1b8": {
-                "displayName": "Subcategory Moment Alpha"
+                "displayName": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
             },
             "customers/cresta/profiles/walter-dev/moments/ab959df8-d1b5-425f-a203-5b7e175a397f": {
                 "displayName": "Subcategory Bravo Name"
@@ -187,7 +187,7 @@
                 "displayName": "Charlie Subcategory"
             },
             "customers/cresta/profiles/walter-dev/moments/dfdc8e4e-afd5-4071-b60b-82b77535d742": {
-                "displayName": "Delta Display Value"
+                "displayName": "Lorem ipsum dolor siyt amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
             },
             "customers/cresta/profiles/walter-dev/moments/5a447a37-61d1-4cdf-911b-b38ba3c10ae3": {
                 "displayName": "Echo Moment Example"
@@ -198,5 +198,9 @@
                 "displayName": "Walter Dev Usecase"
             }
         }
+    },
+    "renderingConfig": {
+        "height": 400,
+        "width": 1000
     }
 }

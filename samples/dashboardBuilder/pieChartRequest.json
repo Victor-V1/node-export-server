@@ -151,5 +151,30 @@
                 ]
             }
         ]
+    },
+    "chartDataMaps": {
+        "moments": {
+            "customers/cresta/profiles/walter-dev/moments/ab959df8-d1b5-425f-a203-5b7e175a397f": {
+                "displayName": "Subcategory Moment Alpha"
+            },
+            "customers/cresta/profiles/walter-dev/moments/b597c212-ba94-4a2f-a495-d627d6c5a769": {
+                "displayName": "Charlie Subcategory"
+            },
+            "customers/cresta/profiles/walter-dev/moments/dfdc8e4e-afd5-4071-b60b-82b77535d742": {
+                "displayName": "Delta Display Value"
+            },
+            "customers/cresta/profiles/walter-dev/moments/5a447a37-61d1-4cdf-911b-b38ba3c10ae3": {
+                "displayName": "Echo Moment Example"
+            }
+        },
+        "usecases": {
+            "customers/cresta/profiles/walter-dev/usecases/walter-dev": {
+                "displayName": "Walter Dev Usecase"
+            }
+        }
+    },
+    "renderingConfig": {
+        "height": 400,
+        "width": 400
     }
 }

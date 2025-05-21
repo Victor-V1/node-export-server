@@ -1,0 +1,153 @@
+{
+    "chartConfig": {
+        "name": "customers/cresta/profiles/walter-dev/analyticsCharts/94c93a4c-228f-4ae6-89bf-38913e3a27ab",
+        "state": "STATE_UNSPECIFIED",
+        "displayName": "Sentiment",
+        "description": "",
+        "dataConfig": {
+            "metrics": [
+                {
+                    "renderingConfig": {
+                        "colors": [
+                            "#228BE6",
+                            "#FD7E14",
+                            "#2F9E44",
+                            "#5246E0",
+                            "#E03131",
+                            "#15AABF",
+                            "#FCC419",
+                            "#F783AC",
+                            "#868E96",
+                            "#A9E34B"
+                        ]
+                    },
+                    "forSentiment": {
+                        "sentiments": [
+                            {
+                                "momentName": "customers/cresta/profiles/walter-dev/moments/711984c6-60ef-4d03-87ef-62741bf962c7",
+                                "type": "CONVERSATION"
+                            },
+                            {
+                                "momentName": "customers/cresta/profiles/walter-dev/moments/946e45e5-4946-4670-956e-7f2690b5dfa8",
+                                "type": "CONVERSATION"
+                            },
+                            {
+                                "momentName": "customers/cresta/profiles/walter-dev/moments/527050fd-65f0-46f7-8a3d-6d11e1e07605",
+                                "type": "CONVERSATION"
+                            }
+                        ],
+                        "statsType": {
+                            "commonStatsType": "COMMON_STATS_TYPE_CONVERSATION_COUNT"
+                        }
+                    }
+                }
+            ],
+            "filters": [
+                {
+                    "targetAttribute": "CHART_ATTRIBUTE_UNSPECIFIED",
+                    "operator": "IN",
+                    "valueSet": {
+                        "rangeValues": {
+                            "rangeValues": [
+                                {
+                                    "fromValue": {
+                                        "timestamp": "2024-12-23T08:00:00Z"
+                                    },
+                                    "toValue": {
+                                        "timestamp": "2025-01-22T07:59:59.999Z"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            ],
+            "groupBy": []
+        },
+        "audience": {
+            "roles": []
+        },
+        "accessibility": "LIBRARY",
+        "creator": "customers/cresta/users/fcc2009280b7b2c7",
+        "lastEditor": "customers/cresta/users/fcc2009280b7b2c7",
+        "createTime": "2025-01-21T22:32:00.378053Z",
+        "updateTime": "2025-01-22T01:31:01.216416Z",
+        "renderingConfig": {
+            "chartDisplayType": "PIE_CHART"
+        }
+    },
+    "evaluationData": {
+        "groupByValuesForAllKeys": [
+            {
+                "groupByValues": [
+                    {
+                        "value": {
+                            "sentimentValue": {
+                                "momentName": "customers/cresta/profiles/walter-dev/moments/711984c6-60ef-4d03-87ef-62741bf962c7",
+                                "type": "CONVERSATION"
+                            }
+                        }
+                    },
+                    {
+                        "value": {
+                            "sentimentValue": {
+                                "momentName": "customers/cresta/profiles/walter-dev/moments/946e45e5-4946-4670-956e-7f2690b5dfa8",
+                                "type": "CONVERSATION"
+                            }
+                        }
+                    },
+                    {
+                        "value": {
+                            "sentimentValue": {
+                                "momentName": "customers/cresta/profiles/walter-dev/moments/527050fd-65f0-46f7-8a3d-6d11e1e07605",
+                                "type": "CONVERSATION"
+                            }
+                        }
+                    }
+                ]
+            }
+        ],
+        "analyticsNumbers": [
+            {
+                "value": 2,
+                "groupByValueIndexes": [
+                    0
+                ]
+            },
+            {
+                "value": 2737,
+                "groupByValueIndexes": [
+                    1
+                ]
+            },
+            {
+                "value": 15,
+                "groupByValueIndexes": [
+                    2
+                ]
+            }
+        ]
+    },
+    "chartDataMaps": {
+        "sentimentsByName": {
+            "customers/cresta/profiles/walter-dev/moments/711984c6-60ef-4d03-87ef-62741bf962c7": {
+                "displayName": "Positive"
+            },
+            "customers/cresta/profiles/walter-dev/moments/946e45e5-4946-4670-956e-7f2690b5dfa8": {
+                "displayName": "Neutral"
+            },
+            "customers/cresta/profiles/walter-dev/moments/527050fd-65f0-46f7-8a3d-6d11e1e07605": {
+                "displayName": "Negative"
+            }
+        },
+        "usecases": {
+            "customers/cresta/profiles/walter-dev/usecases/walter-dev": {
+                "displayName": "Walter Dev Usecase"
+            }
+        }
+    },
+    "renderingConfig": {
+        "height": 400,
+        "width": 400
+    }
+}

@@ -722,5 +722,9 @@
                 }
             ]
         }
+    },
+    "renderingConfig": {
+        "height": 350,
+        "width": 500
     }
 }

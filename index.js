@@ -19,9 +19,6 @@ const initializeExporter = async (options) => {
 
 export const handler = async (event) => {
   try {
-    console.log('DIN INDEX');
-    console.log(process.env.IS_LAMBDA_IMAGE_BUILD);
-    // Get chart options, allowing title customization from the event
     const chartOptions = await chartConfigMiddleware(event);
     let options = exporter.setOptions(chartOptions);
     await initializeExporter(options);
@@ -45,7 +42,6 @@ export const handler = async (event) => {
       },
       body: JSON.stringify({
         image: chartResult.result,
-        message: 'Chart generated successfully'
       })
     };
   } catch (error) {
@@ -56,8 +52,7 @@ export const handler = async (event) => {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        message: 'Error generating chart',
-        error: error.message
+        error: error.message,
       })
     };
   } finally {

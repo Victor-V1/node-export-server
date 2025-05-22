@@ -20,3 +20,5 @@ resources.json
 **/*.svg
 **/*.jpeg
 **/*.log
+
+package-lock.json

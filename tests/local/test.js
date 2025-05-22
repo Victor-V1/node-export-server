@@ -3,760 +3,585 @@ import fs from 'fs';
 import path from 'path';
 
 async function testHandler() {
-    const event = {
-        "chartConfig": {
-            "name": "customers/cresta/profiles/walter-dev/analyticsCharts/dc8c8b18-995d-4a52-9120-1fc412fb070e",
-            "state": "STATE_UNSPECIFIED",
-            "displayName": "Authentication result",
-            "description": "",
-            "dataConfig": {
-                "metrics": [
-                    {
-                        "renderingConfig": {
-                            "colors": [
-                                "#228BE6",
-                                "#FD7E14",
-                                "#2F9E44",
-                                "#5246E0",
-                                "#E03131",
-                                "#15AABF",
-                                "#FCC419",
-                                "#F783AC",
-                                "#868E96",
-                                "#A9E34B"
-                            ]
-                        },
-                        "forMetadata": {
-                            "metadatas": [
-                                {
-                                    "momentName": "customers/cresta/profiles/walter-dev/moments/048a0206-0ee8-47be-9c2e-0b6d641bd35d",
-                                    "outcomeConfig": null,
-                                    "values": [
-                                        {
-                                            "booleanValue": true
-                                        }
-                                    ],
-                                    "numericValueRanges": []
-                                },
-                                {
-                                    "momentName": "customers/cresta/profiles/walter-dev/moments/048a0206-0ee8-47be-9c2e-0b6d641bd35d",
-                                    "outcomeConfig": null,
-                                    "values": [
-                                        {
-                                            "booleanValue": false
-                                        }
-                                    ],
-                                    "numericValueRanges": []
-                                }
-                            ],
-                            "statsType": {
-                                "commonStatsType": "COMMON_STATS_TYPE_CONVERSATION_COUNT"
-                            }
-                        }
-                    }
-                ],
-                "filters": [
-                    {
-                        "targetAttribute": "CHART_ATTRIBUTE_UNSPECIFIED",
-                        "operator": "IN",
-                        "valueSet": {
-                            "rangeValues": {
-                                "rangeValues": [
-                                    {
-                                        "fromValue": {
-                                            "timestamp": "2024-12-23T08:00:00Z"
-                                        },
-                                        "toValue": {
-                                            "timestamp": "2025-01-22T07:59:59.999Z"
-                                        }
-                                    }
-                                ]
-                            }
-                        }
-                    }
-                ],
-                "groupBy": [
-                    {
-                        "byTime": {
-                            "timeAttribute": "CHART_ATTRIBUTE_UNSPECIFIED",
-                            "interval": "DAY"
-                        }
-                    }
-                ]
+  const event = {
+    chartConfig: {
+      name: 'customers/cresta/profiles/walter-dev/analyticsCharts/dc8c8b18-995d-4a52-9120-1fc412fb070e',
+      state: 'STATE_UNSPECIFIED',
+      displayName: 'Authentication result',
+      description: '',
+      dataConfig: {
+        metrics: [
+          {
+            renderingConfig: {
+              colors: [
+                '#228BE6',
+                '#FD7E14',
+                '#2F9E44',
+                '#5246E0',
+                '#E03131',
+                '#15AABF',
+                '#FCC419',
+                '#F783AC',
+                '#868E96',
+                '#A9E34B'
+              ]
             },
-            "audience": {
-                "roles": []
-            },
-            "accessibility": "LIBRARY",
-            "creator": "customers/cresta/users/fcc2009280b7b2c7",
-            "lastEditor": "customers/cresta/users/fcc2009280b7b2c7",
-            "createTime": "2025-01-21T22:54:02.549597Z",
-            "updateTime": "2025-01-22T00:21:24.331930Z",
-            "renderingConfig": {
-                "chartDisplayType": "BAR_CHART"
+            forMetadata: {
+              metadatas: [
+                {
+                  momentName:
+                    'customers/cresta/profiles/walter-dev/moments/048a0206-0ee8-47be-9c2e-0b6d641bd35d',
+                  outcomeConfig: null,
+                  values: [
+                    {
+                      booleanValue: true
+                    }
+                  ],
+                  numericValueRanges: []
+                },
+                {
+                  momentName:
+                    'customers/cresta/profiles/walter-dev/moments/048a0206-0ee8-47be-9c2e-0b6d641bd35d',
+                  outcomeConfig: null,
+                  values: [
+                    {
+                      booleanValue: false
+                    }
+                  ],
+                  numericValueRanges: []
+                }
+              ],
+              statsType: {
+                commonStatsType: 'COMMON_STATS_TYPE_CONVERSATION_COUNT'
+              }
             }
-        },
-        "evaluationData": {
-            "groupByValuesForAllKeys": [
-                {
-                    "groupByValues": [
-                        {
-                            "value": {
-                                "metadataValue": {
-                                    "momentName": "customers/cresta/profiles/walter-dev/moments/048a0206-0ee8-47be-9c2e-0b6d641bd35d",
-                                    "outcomeConfig": null,
-                                    "values": [
-                                        {
-                                            "booleanValue": true
-                                        }
-                                    ],
-                                    "numericValueRanges": []
-                                }
-                            }
-                        },
-                        {
-                            "value": {
-                                "metadataValue": {
-                                    "momentName": "customers/cresta/profiles/walter-dev/moments/048a0206-0ee8-47be-9c2e-0b6d641bd35d",
-                                    "outcomeConfig": null,
-                                    "values": [
-                                        {
-                                            "booleanValue": false
-                                        }
-                                    ],
-                                    "numericValueRanges": []
-                                }
-                            }
-                        }
-                    ]
-                },
-                {
-                    "groupByValues": [
-                        {
-                            "value": {
-                                "timestamp": "2024-12-23T08:00:00Z"
-                            }
-                        },
-                        {
-                            "value": {
-                                "timestamp": "2024-12-24T08:00:00Z"
-                            }
-                        },
-                        {
-                            "value": {
-                                "timestamp": "2024-12-25T08:00:00Z"
-                            }
-                        },
-                        {
-                            "value": {
-                                "timestamp": "2024-12-26T08:00:00Z"
-                            }
-                        },
-                        {
-                            "value": {
-                                "timestamp": "2024-12-27T08:00:00Z"
-                            }
-                        },
-                        {
-                            "value": {
-                                "timestamp": "2024-12-28T08:00:00Z"
-                            }
-                        },
-                        {
-                            "value": {
-                                "timestamp": "2024-12-29T08:00:00Z"
-                            }
-                        },
-                        {
-                            "value": {
-                                "timestamp": "2024-12-30T08:00:00Z"
-                            }
-                        },
-                        {
-                            "value": {
-                                "timestamp": "2024-12-31T08:00:00Z"
-                            }
-                        },
-                        {
-                            "value": {
-                                "timestamp": "2025-01-01T08:00:00Z"
-                            }
-                        },
-                        {
-                            "value": {
-                                "timestamp": "2025-01-02T08:00:00Z"
-                            }
-                        },
-                        {
-                            "value": {
-                                "timestamp": "2025-01-03T08:00:00Z"
-                            }
-                        },
-                        {
-                            "value": {
-                                "timestamp": "2025-01-04T08:00:00Z"
-                            }
-                        },
-                        {
-                            "value": {
-                                "timestamp": "2025-01-05T08:00:00Z"
-                            }
-                        },
-                        {
-                            "value": {
-                                "timestamp": "2025-01-06T08:00:00Z"
-                            }
-                        },
-                        {
-                            "value": {
-                                "timestamp": "2025-01-07T08:00:00Z"
-                            }
-                        },
-                        {
-                            "value": {
-                                "timestamp": "2025-01-08T08:00:00Z"
-                            }
-                        },
-                        {
-                            "value": {
-                                "timestamp": "2025-01-09T08:00:00Z"
-                            }
-                        },
-                        {
-                            "value": {
-                                "timestamp": "2025-01-10T08:00:00Z"
-                            }
-                        },
-                        {
-                            "value": {
-                                "timestamp": "2025-01-11T08:00:00Z"
-                            }
-                        },
-                        {
-                            "value": {
-                                "timestamp": "2025-01-12T08:00:00Z"
-                            }
-                        },
-                        {
-                            "value": {
-                                "timestamp": "2025-01-13T08:00:00Z"
-                            }
-                        },
-                        {
-                            "value": {
-                                "timestamp": "2025-01-14T08:00:00Z"
-                            }
-                        },
-                        {
-                            "value": {
-                                "timestamp": "2025-01-15T08:00:00Z"
-                            }
-                        },
-                        {
-                            "value": {
-                                "timestamp": "2025-01-16T08:00:00Z"
-                            }
-                        },
-                        {
-                            "value": {
-                                "timestamp": "2025-01-17T08:00:00Z"
-                            }
-                        },
-                        {
-                            "value": {
-                                "timestamp": "2025-01-18T08:00:00Z"
-                            }
-                        },
-                        {
-                            "value": {
-                                "timestamp": "2025-01-19T08:00:00Z"
-                            }
-                        },
-                        {
-                            "value": {
-                                "timestamp": "2025-01-20T08:00:00Z"
-                            }
-                        },
-                        {
-                            "value": {
-                                "timestamp": "2025-01-21T08:00:00Z"
-                            }
-                        }
-                    ]
-                }
-            ],
-            "analyticsNumbers": [
-                {
-                    "value": 0,
-                    "groupByValueIndexes": [
-                        0,
-                        0
-                    ]
-                },
-                {
-                    "value": 0,
-                    "groupByValueIndexes": [
-                        0,
-                        1
-                    ]
-                },
-                {
-                    "value": 0,
-                    "groupByValueIndexes": [
-                        0,
-                        2
-                    ]
-                },
-                {
-                    "value": 0,
-                    "groupByValueIndexes": [
-                        0,
-                        3
-                    ]
-                },
-                {
-                    "value": 0,
-                    "groupByValueIndexes": [
-                        0,
-                        4
-                    ]
-                },
-                {
-                    "value": 0,
-                    "groupByValueIndexes": [
-                        0,
-                        5
-                    ]
-                },
-                {
-                    "value": 0,
-                    "groupByValueIndexes": [
-                        0,
-                        6
-                    ]
-                },
-                {
-                    "value": 0,
-                    "groupByValueIndexes": [
-                        0,
-                        7
-                    ]
-                },
-                {
-                    "value": 0,
-                    "groupByValueIndexes": [
-                        0,
-                        8
-                    ]
-                },
-                {
-                    "value": 0,
-                    "groupByValueIndexes": [
-                        0,
-                        9
-                    ]
-                },
-                {
-                    "value": 0,
-                    "groupByValueIndexes": [
-                        0,
-                        10
-                    ]
-                },
-                {
-                    "value": 0,
-                    "groupByValueIndexes": [
-                        0,
-                        11
-                    ]
-                },
-                {
-                    "value": 0,
-                    "groupByValueIndexes": [
-                        0,
-                        12
-                    ]
-                },
-                {
-                    "value": 0,
-                    "groupByValueIndexes": [
-                        0,
-                        13
-                    ]
-                },
-                {
-                    "value": 0,
-                    "groupByValueIndexes": [
-                        0,
-                        14
-                    ]
-                },
-                {
-                    "value": 0,
-                    "groupByValueIndexes": [
-                        0,
-                        15
-                    ]
-                },
-                {
-                    "value": 4,
-                    "groupByValueIndexes": [
-                        0,
-                        16
-                    ]
-                },
-                {
-                    "value": 0,
-                    "groupByValueIndexes": [
-                        0,
-                        17
-                    ]
-                },
-                {
-                    "value": 5,
-                    "groupByValueIndexes": [
-                        0,
-                        18
-                    ]
-                },
-                {
-                    "value": 5,
-                    "groupByValueIndexes": [
-                        0,
-                        19
-                    ]
-                },
-                {
-                    "value": 0,
-                    "groupByValueIndexes": [
-                        0,
-                        20
-                    ]
-                },
-                {
-                    "value": 1,
-                    "groupByValueIndexes": [
-                        0,
-                        21
-                    ]
-                },
-                {
-                    "value": 5,
-                    "groupByValueIndexes": [
-                        0,
-                        22
-                    ]
-                },
-                {
-                    "value": 0,
-                    "groupByValueIndexes": [
-                        0,
-                        23
-                    ]
-                },
-                {
-                    "value": 0,
-                    "groupByValueIndexes": [
-                        0,
-                        24
-                    ]
-                },
-                {
-                    "value": 3,
-                    "groupByValueIndexes": [
-                        0,
-                        25
-                    ]
-                },
-                {
-                    "value": 2,
-                    "groupByValueIndexes": [
-                        0,
-                        26
-                    ]
-                },
-                {
-                    "value": 0,
-                    "groupByValueIndexes": [
-                        0,
-                        27
-                    ]
-                },
-                {
-                    "value": 0,
-                    "groupByValueIndexes": [
-                        0,
-                        28
-                    ]
-                },
-                {
-                    "value": 2,
-                    "groupByValueIndexes": [
-                        0,
-                        29
-                    ]
-                },
-                {
-                    "value": 0,
-                    "groupByValueIndexes": [
-                        1,
-                        0
-                    ]
-                },
-                {
-                    "value": 0,
-                    "groupByValueIndexes": [
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "value": 0,
-                    "groupByValueIndexes": [
-                        1,
-                        2
-                    ]
-                },
-                {
-                    "value": 0,
-                    "groupByValueIndexes": [
-                        1,
-                        3
-                    ]
-                },
-                {
-                    "value": 0,
-                    "groupByValueIndexes": [
-                        1,
-                        4
-                    ]
-                },
-                {
-                    "value": 0,
-                    "groupByValueIndexes": [
-                        1,
-                        5
-                    ]
-                },
-                {
-                    "value": 0,
-                    "groupByValueIndexes": [
-                        1,
-                        6
-                    ]
-                },
-                {
-                    "value": 0,
-                    "groupByValueIndexes": [
-                        1,
-                        7
-                    ]
-                },
-                {
-                    "value": 0,
-                    "groupByValueIndexes": [
-                        1,
-                        8
-                    ]
-                },
-                {
-                    "value": 0,
-                    "groupByValueIndexes": [
-                        1,
-                        9
-                    ]
-                },
-                {
-                    "value": 0,
-                    "groupByValueIndexes": [
-                        1,
-                        10
-                    ]
-                },
-                {
-                    "value": 0,
-                    "groupByValueIndexes": [
-                        1,
-                        11
-                    ]
-                },
-                {
-                    "value": 0,
-                    "groupByValueIndexes": [
-                        1,
-                        12
-                    ]
-                },
-                {
-                    "value": 0,
-                    "groupByValueIndexes": [
-                        1,
-                        13
-                    ]
-                },
-                {
-                    "value": 0,
-                    "groupByValueIndexes": [
-                        1,
-                        14
-                    ]
-                },
-                {
-                    "value": 1,
-                    "groupByValueIndexes": [
-                        1,
-                        15
-                    ]
-                },
-                {
-                    "value": 0,
-                    "groupByValueIndexes": [
-                        1,
-                        16
-                    ]
-                },
-                {
-                    "value": 0,
-                    "groupByValueIndexes": [
-                        1,
-                        17
-                    ]
-                },
-                {
-                    "value": 2,
-                    "groupByValueIndexes": [
-                        1,
-                        18
-                    ]
-                },
-                {
-                    "value": 2,
-                    "groupByValueIndexes": [
-                        1,
-                        19
-                    ]
-                },
-                {
-                    "value": 0,
-                    "groupByValueIndexes": [
-                        1,
-                        20
-                    ]
-                },
-                {
-                    "value": 5,
-                    "groupByValueIndexes": [
-                        1,
-                        21
-                    ]
-                },
-                {
-                    "value": 3,
-                    "groupByValueIndexes": [
-                        1,
-                        22
-                    ]
-                },
-                {
-                    "value": 0,
-                    "groupByValueIndexes": [
-                        1,
-                        23
-                    ]
-                },
-                {
-                    "value": 0,
-                    "groupByValueIndexes": [
-                        1,
-                        24
-                    ]
-                },
-                {
-                    "value": 1,
-                    "groupByValueIndexes": [
-                        1,
-                        25
-                    ]
-                },
-                {
-                    "value": 0,
-                    "groupByValueIndexes": [
-                        1,
-                        26
-                    ]
-                },
-                {
-                    "value": 0,
-                    "groupByValueIndexes": [
-                        1,
-                        27
-                    ]
-                },
-                {
-                    "value": 6,
-                    "groupByValueIndexes": [
-                        1,
-                        28
-                    ]
-                },
-                {
-                    "value": 1,
-                    "groupByValueIndexes": [
-                        1,
-                        29
-                    ]
-                }
-            ]
-        },
-        "chartDataMaps": {
-            "metadataValuesByName": {
-                "customers/cresta/profiles/walter-dev/moments/048a0206-0ee8-47be-9c2e-0b6d641bd35d": [
-                    {
-                        "binaryOutcomeValueEnum": "POSITIVE",
-                        "description": "asdf",
-                        "value": {
-                            "stringValue": "asdfasdf"
-                        }
+          }
+        ],
+        filters: [
+          {
+            targetAttribute: 'CHART_ATTRIBUTE_UNSPECIFIED',
+            operator: 'IN',
+            valueSet: {
+              rangeValues: {
+                rangeValues: [
+                  {
+                    fromValue: {
+                      timestamp: '2024-12-23T08:00:00Z'
                     },
-                    {
-                        "binaryOutcomeValueEnum": "NEGATIVE",
-                        "description": "asdf",
-                        "value": {
-                            "stringValue": "asdfasdf"
-                        }
+                    toValue: {
+                      timestamp: '2025-01-22T07:59:59.999Z'
                     }
+                  }
                 ]
+              }
             }
+          }
+        ],
+        groupBy: [
+          {
+            byTime: {
+              timeAttribute: 'CHART_ATTRIBUTE_UNSPECIFIED',
+              interval: 'DAY'
+            }
+          }
+        ]
+      },
+      audience: {
+        roles: []
+      },
+      accessibility: 'LIBRARY',
+      creator: 'customers/cresta/users/fcc2009280b7b2c7',
+      lastEditor: 'customers/cresta/users/fcc2009280b7b2c7',
+      createTime: '2025-01-21T22:54:02.549597Z',
+      updateTime: '2025-01-22T00:21:24.331930Z',
+      renderingConfig: {
+        chartDisplayType: 'BAR_CHART'
+      }
+    },
+    evaluationData: {
+      groupByValuesForAllKeys: [
+        {
+          groupByValues: [
+            {
+              value: {
+                metadataValue: {
+                  momentName:
+                    'customers/cresta/profiles/walter-dev/moments/048a0206-0ee8-47be-9c2e-0b6d641bd35d',
+                  outcomeConfig: null,
+                  values: [
+                    {
+                      booleanValue: true
+                    }
+                  ],
+                  numericValueRanges: []
+                }
+              }
+            },
+            {
+              value: {
+                metadataValue: {
+                  momentName:
+                    'customers/cresta/profiles/walter-dev/moments/048a0206-0ee8-47be-9c2e-0b6d641bd35d',
+                  outcomeConfig: null,
+                  values: [
+                    {
+                      booleanValue: false
+                    }
+                  ],
+                  numericValueRanges: []
+                }
+              }
+            }
+          ]
         },
-        "renderingConfig": {
-            "height": 350,
-            "width": 500
+        {
+          groupByValues: [
+            {
+              value: {
+                timestamp: '2024-12-23T08:00:00Z'
+              }
+            },
+            {
+              value: {
+                timestamp: '2024-12-24T08:00:00Z'
+              }
+            },
+            {
+              value: {
+                timestamp: '2024-12-25T08:00:00Z'
+              }
+            },
+            {
+              value: {
+                timestamp: '2024-12-26T08:00:00Z'
+              }
+            },
+            {
+              value: {
+                timestamp: '2024-12-27T08:00:00Z'
+              }
+            },
+            {
+              value: {
+                timestamp: '2024-12-28T08:00:00Z'
+              }
+            },
+            {
+              value: {
+                timestamp: '2024-12-29T08:00:00Z'
+              }
+            },
+            {
+              value: {
+                timestamp: '2024-12-30T08:00:00Z'
+              }
+            },
+            {
+              value: {
+                timestamp: '2024-12-31T08:00:00Z'
+              }
+            },
+            {
+              value: {
+                timestamp: '2025-01-01T08:00:00Z'
+              }
+            },
+            {
+              value: {
+                timestamp: '2025-01-02T08:00:00Z'
+              }
+            },
+            {
+              value: {
+                timestamp: '2025-01-03T08:00:00Z'
+              }
+            },
+            {
+              value: {
+                timestamp: '2025-01-04T08:00:00Z'
+              }
+            },
+            {
+              value: {
+                timestamp: '2025-01-05T08:00:00Z'
+              }
+            },
+            {
+              value: {
+                timestamp: '2025-01-06T08:00:00Z'
+              }
+            },
+            {
+              value: {
+                timestamp: '2025-01-07T08:00:00Z'
+              }
+            },
+            {
+              value: {
+                timestamp: '2025-01-08T08:00:00Z'
+              }
+            },
+            {
+              value: {
+                timestamp: '2025-01-09T08:00:00Z'
+              }
+            },
+            {
+              value: {
+                timestamp: '2025-01-10T08:00:00Z'
+              }
+            },
+            {
+              value: {
+                timestamp: '2025-01-11T08:00:00Z'
+              }
+            },
+            {
+              value: {
+                timestamp: '2025-01-12T08:00:00Z'
+              }
+            },
+            {
+              value: {
+                timestamp: '2025-01-13T08:00:00Z'
+              }
+            },
+            {
+              value: {
+                timestamp: '2025-01-14T08:00:00Z'
+              }
+            },
+            {
+              value: {
+                timestamp: '2025-01-15T08:00:00Z'
+              }
+            },
+            {
+              value: {
+                timestamp: '2025-01-16T08:00:00Z'
+              }
+            },
+            {
+              value: {
+                timestamp: '2025-01-17T08:00:00Z'
+              }
+            },
+            {
+              value: {
+                timestamp: '2025-01-18T08:00:00Z'
+              }
+            },
+            {
+              value: {
+                timestamp: '2025-01-19T08:00:00Z'
+              }
+            },
+            {
+              value: {
+                timestamp: '2025-01-20T08:00:00Z'
+              }
+            },
+            {
+              value: {
+                timestamp: '2025-01-21T08:00:00Z'
+              }
+            }
+          ]
         }
+      ],
+      analyticsNumbers: [
+        {
+          value: 0,
+          groupByValueIndexes: [0, 0]
+        },
+        {
+          value: 0,
+          groupByValueIndexes: [0, 1]
+        },
+        {
+          value: 0,
+          groupByValueIndexes: [0, 2]
+        },
+        {
+          value: 0,
+          groupByValueIndexes: [0, 3]
+        },
+        {
+          value: 0,
+          groupByValueIndexes: [0, 4]
+        },
+        {
+          value: 0,
+          groupByValueIndexes: [0, 5]
+        },
+        {
+          value: 0,
+          groupByValueIndexes: [0, 6]
+        },
+        {
+          value: 0,
+          groupByValueIndexes: [0, 7]
+        },
+        {
+          value: 0,
+          groupByValueIndexes: [0, 8]
+        },
+        {
+          value: 0,
+          groupByValueIndexes: [0, 9]
+        },
+        {
+          value: 0,
+          groupByValueIndexes: [0, 10]
+        },
+        {
+          value: 0,
+          groupByValueIndexes: [0, 11]
+        },
+        {
+          value: 0,
+          groupByValueIndexes: [0, 12]
+        },
+        {
+          value: 0,
+          groupByValueIndexes: [0, 13]
+        },
+        {
+          value: 0,
+          groupByValueIndexes: [0, 14]
+        },
+        {
+          value: 0,
+          groupByValueIndexes: [0, 15]
+        },
+        {
+          value: 4,
+          groupByValueIndexes: [0, 16]
+        },
+        {
+          value: 0,
+          groupByValueIndexes: [0, 17]
+        },
+        {
+          value: 5,
+          groupByValueIndexes: [0, 18]
+        },
+        {
+          value: 5,
+          groupByValueIndexes: [0, 19]
+        },
+        {
+          value: 0,
+          groupByValueIndexes: [0, 20]
+        },
+        {
+          value: 1,
+          groupByValueIndexes: [0, 21]
+        },
+        {
+          value: 5,
+          groupByValueIndexes: [0, 22]
+        },
+        {
+          value: 0,
+          groupByValueIndexes: [0, 23]
+        },
+        {
+          value: 0,
+          groupByValueIndexes: [0, 24]
+        },
+        {
+          value: 3,
+          groupByValueIndexes: [0, 25]
+        },
+        {
+          value: 2,
+          groupByValueIndexes: [0, 26]
+        },
+        {
+          value: 0,
+          groupByValueIndexes: [0, 27]
+        },
+        {
+          value: 0,
+          groupByValueIndexes: [0, 28]
+        },
+        {
+          value: 2,
+          groupByValueIndexes: [0, 29]
+        },
+        {
+          value: 0,
+          groupByValueIndexes: [1, 0]
+        },
+        {
+          value: 0,
+          groupByValueIndexes: [1, 1]
+        },
+        {
+          value: 0,
+          groupByValueIndexes: [1, 2]
+        },
+        {
+          value: 0,
+          groupByValueIndexes: [1, 3]
+        },
+        {
+          value: 0,
+          groupByValueIndexes: [1, 4]
+        },
+        {
+          value: 0,
+          groupByValueIndexes: [1, 5]
+        },
+        {
+          value: 0,
+          groupByValueIndexes: [1, 6]
+        },
+        {
+          value: 0,
+          groupByValueIndexes: [1, 7]
+        },
+        {
+          value: 0,
+          groupByValueIndexes: [1, 8]
+        },
+        {
+          value: 0,
+          groupByValueIndexes: [1, 9]
+        },
+        {
+          value: 0,
+          groupByValueIndexes: [1, 10]
+        },
+        {
+          value: 0,
+          groupByValueIndexes: [1, 11]
+        },
+        {
+          value: 0,
+          groupByValueIndexes: [1, 12]
+        },
+        {
+          value: 0,
+          groupByValueIndexes: [1, 13]
+        },
+        {
+          value: 0,
+          groupByValueIndexes: [1, 14]
+        },
+        {
+          value: 1,
+          groupByValueIndexes: [1, 15]
+        },
+        {
+          value: 0,
+          groupByValueIndexes: [1, 16]
+        },
+        {
+          value: 0,
+          groupByValueIndexes: [1, 17]
+        },
+        {
+          value: 2,
+          groupByValueIndexes: [1, 18]
+        },
+        {
+          value: 2,
+          groupByValueIndexes: [1, 19]
+        },
+        {
+          value: 0,
+          groupByValueIndexes: [1, 20]
+        },
+        {
+          value: 5,
+          groupByValueIndexes: [1, 21]
+        },
+        {
+          value: 3,
+          groupByValueIndexes: [1, 22]
+        },
+        {
+          value: 0,
+          groupByValueIndexes: [1, 23]
+        },
+        {
+          value: 0,
+          groupByValueIndexes: [1, 24]
+        },
+        {
+          value: 1,
+          groupByValueIndexes: [1, 25]
+        },
+        {
+          value: 0,
+          groupByValueIndexes: [1, 26]
+        },
+        {
+          value: 0,
+          groupByValueIndexes: [1, 27]
+        },
+        {
+          value: 6,
+          groupByValueIndexes: [1, 28]
+        },
+        {
+          value: 1,
+          groupByValueIndexes: [1, 29]
+        }
+      ]
+    },
+    chartDataMaps: {
+      metadataValuesByName: {
+        'customers/cresta/profiles/walter-dev/moments/048a0206-0ee8-47be-9c2e-0b6d641bd35d':
+          [
+            {
+              binaryOutcomeValueEnum: 'POSITIVE',
+              description: 'asdf',
+              value: {
+                stringValue: 'asdfasdf'
+              }
+            },
+            {
+              binaryOutcomeValueEnum: 'NEGATIVE',
+              description: 'asdf',
+              value: {
+                stringValue: 'asdfasdf'
+              }
+            }
+          ]
+      }
+    },
+    renderingConfig: {
+      height: 350,
+      width: 500
+    }
+  };
+
+  try {
+    const result = await handler(event);
+    console.log('Response status:', result.statusCode);
+
+    // Parse the response body
+    const body = JSON.parse(result.body);
+
+    // Convert base64 to buffer
+    const imageBuffer = Buffer.from(body.image, 'base64');
+
+    // Create output directory if it doesn't exist
+    const outputDir = path.join(process.cwd(), 'output');
+    if (!fs.existsSync(outputDir)) {
+      fs.mkdirSync(outputDir);
     }
 
-    try {
-        const result = await handler(event);
-        console.log('Response status:', result.statusCode);
-
-        // Parse the response body
-        const body = JSON.parse(result.body);
-
-        // Convert base64 to buffer
-        const imageBuffer = Buffer.from(body.image, 'base64');
-
-        // Create output directory if it doesn't exist
-        const outputDir = path.join(process.cwd(), 'output');
-        if (!fs.existsSync(outputDir)) {
-            fs.mkdirSync(outputDir);
-        }
-
-        // Write to file
-        const outputPath = path.join(outputDir, 'chart.png');
-        fs.writeFileSync(outputPath, imageBuffer);
-        console.log('Image saved to:', outputPath);
-    } catch (error) {
-        console.error('Error:', error);
-    }
+    // Write to file
+    const outputPath = path.join(outputDir, 'chart.png');
+    fs.writeFileSync(outputPath, imageBuffer);
+    console.log('Image saved to:', outputPath);
+  } catch (error) {
+    console.error('Error:', error);
+  }
 }
 
 testHandler();

@@ -7,21 +7,11 @@ import { __dirname } from './lib/utils.js';
 
 dotenv.config({ path: path.join(__dirname, '.env') });
 
-// Initialize the exporter once when the Lambda container starts
-const initializeExporter = async (options) => {
-  options.puppeteer.args.push('--no-sandbox');
-  options.puppeteer.args.push('--single-process');
-  options.puppeteer.args.push('--disable-setuid-sandbox');
-  options.puppeteer.args.push('--disable-dev-shm-usage');
-  options.puppeteer.args.push('--no-zygote');
-  await exporter.initExport(options);
-};
-
 export const handler = async (event) => {
   try {
     const chartOptions = await chartConfigMiddleware(event);
     let options = exporter.setOptions(chartOptions);
-    await initializeExporter(options);
+    await exporter.initExport(options);
 
     // Create a promise wrapper around the export callback
     const chartResult = await new Promise((resolve, reject) => {

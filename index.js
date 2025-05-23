@@ -1,6 +1,7 @@
 // Import the Highcharts Export Server module
 import exporter from './lib/index.js';
 import { chartConfigMiddleware } from './lib/cresta/chartConfigMiddleware.js';
+import { uploadToS3 } from './lib/s3.js';
 import dotenv from 'dotenv';
 import path from 'path';
 import { __dirname } from './lib/utils.js';
@@ -24,14 +25,20 @@ export const handler = async (event) => {
       });
     });
 
-    // Return the base64 encoded image
+    // Upload the image to S3 and get the URL
+    const imageUrl = await uploadToS3(
+      chartResult.result,
+      options.export.type || 'png'
+    );
+
+    // Return the image URL
     return {
       statusCode: 200,
       headers: {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        image: chartResult.result,
+        url: imageUrl
       })
     };
   } catch (error) {
@@ -42,7 +49,7 @@ export const handler = async (event) => {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        error: error.message,
+        error: error.message
       })
     };
   } finally {

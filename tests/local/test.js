@@ -563,22 +563,7 @@ async function testHandler() {
     const result = await handler(event);
     console.log('Response status:', result.statusCode);
 
-    // Parse the response body
-    const body = JSON.parse(result.body);
-
-    // Convert base64 to buffer
-    const imageBuffer = Buffer.from(body.image, 'base64');
-
-    // Create output directory if it doesn't exist
-    const outputDir = path.join(process.cwd(), 'output');
-    if (!fs.existsSync(outputDir)) {
-      fs.mkdirSync(outputDir);
-    }
-
-    // Write to file
-    const outputPath = path.join(outputDir, 'chart.png');
-    fs.writeFileSync(outputPath, imageBuffer);
-    console.log('Image saved to:', outputPath);
+    console.log(result.body);
   } catch (error) {
     console.error('Error:', error);
   }

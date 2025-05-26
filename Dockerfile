@@ -3,8 +3,6 @@ FROM --platform=linux/amd64 public.ecr.aws/lambda/nodejs:18
 
 COPY ./package.json ./package-lock.json ./
 
-RUN rm -rf root/.cache/puppeteer
-
 RUN yum install -y \
         fontconfig \
         freetype \
